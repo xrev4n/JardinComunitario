@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
+  <link href="style.css" rel="stylesheet">
+  <title>Maceteros</title>
+</head>
+<body>
+
+  <!-- Inicio de la barra de navegación -->
+  <nav class="navbar navbar-expand-sm navbar-dark bg-dark">
+    <!-- Este es el logo o nombre de la página web -->
+    <a class="navbar-brand text-white" href="#">Jardin Solidario</a>
+    <!-- Este botón aparece cuando la pantalla es pequeña (responsive design) -->
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <!-- Aquí están los enlaces de la barra de navegación -->
+    <div class="collapse navbar-collapse" id="navbarNav">
+      <ul class="navbar-nav">
+        <!-- Cada 'li' es un enlace en la barra de navegación -->
+        <li class="nav-item active">
+          <a class="nav-link text-white" href="index.html">Inicio</a>
+        </li>
+        <!-- Dropdown -->
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle text-white" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+            Plantas
+          </a>
+          <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+            <li><a class="dropdown-item" href="plantas.html">Brotes</a></li>
+            <li><a class="dropdown-item" href="arbustos.html">Arbustos</a></li>
+          </ul>
+        </li>
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle text-white" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+            Productos
+          </a>
+          <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+            <li><a class="dropdown-item" href="sustrato.html">Sustratos</a></li>
+            <li><a class="dropdown-item" href="macetero.html">Maceteros</a></li>
+          </ul>
+        </li>
+      </ul>
+      <span class="navbar-text text-white ms-auto" id="welcomeMessage"></span>
+      <span class="navbar-text text-white ms-auto me-3" id="cartIcon">
+        <i class="fa fa-shopping-cart"></i>
+      </span>
+    </div>
+  </nav>
+  <!-- Fin de la barra de navegación -->
+
+  <h1>Maceteros</h1>
+
+
+   <!--  Inicio Cards -->
+   <div class="container mt-5">
+    <div class="row d-flex align-items-stretch">
+        <!-- Primera card -->
+        <div class="col-md-4">
+            <!-- Card -->
+            <div class="card h-100">
+                <!-- Imagen -->
+                <img src="IMG/plantas/asplenium.jpg" class="card-img-top" alt="Imagen del producto">
+                <div class="card-body d-flex flex-column">
+                    <!-- Nombre -->
+                    <h5 class="card-title">Asplenium (Asplenium L.)</h5>
+                    <!-- Descripcion -->
+                    <p class="card-text">Conocido como “nido de ave” por la forma de roseta en la que están dispuestas sus hojas. El Asplenium, Se caracteriza por su follaje de hojas grandes, lisas y con el borde ligeramente ondulado. Convirtiéndose en uno de los helechos de mayor tendencia para la decoración de interiores.</p>
+                    <!-- Precio -->
+                    <p class="card-price">Precio: $7500</p>
+                    <!-- Disponibilidad -->
+                    <p class="card-availability">Disponibilidad: En stock</p>
+                    <!-- Boton para agregar al carrito -->
+                    <button class="btn btn-primary mt-auto">Agregar al carrito</button>
+                </div>
+            </div>
+        </div>
+        <!-- Segunda card -->
+        <div class="col-md-4">
+            <!-- Card -->
+            <div class="card h-100">
+                <!-- Imagen -->
+                <img src="IMG/plantas/echinocactus.jpg" class="card-img-top" alt="Imagen del producto">
+                <div class="card-body d-flex flex-column">
+                    <!-- Nombre -->
+                    <h5 class="card-title">Asiento de Suegra (Echinocactus Grusonii)</h5>
+                    <!-- Descripcion -->
+                    <p class="card-text">Los grusonii son oriundos de México y es uno de los cactus más populares. Y es que a pesar de que tienen espinas muy afiladas es una de las variedades de cactus más decorativos.</p>
+                    <!-- Precio -->
+                    <p class="card-price">Precio: $22000</p>
+                    <!-- Disponibilidad -->
+                    <p class="card-availability">Disponibilidad: En stock</p>
+                    <!-- Boton para agregar al carrito -->
+                    <button class="btn btn-primary mt-auto">Agregar al carrito</button>
+                </div>
+            </div>
+        </div>
+        <!-- Tercera card -->
+        <div class="col-md-4">
+        <!-- Card -->
+        <div class="card h-100">
+            <!-- Imagen -->
+            <img src="IMG/plantas/wax.jpg" class="card-img-top" alt="Imagen del producto">
+            <div class="card-body d-flex flex-column">
+                <!-- Nombre -->
+                <h5 class="card-title">Amaryllis Wax (Hippeastrum sp.)</h5>
+                <!-- Descripcion -->
+                <p class="card-text">Si buscas un regalo especial, sabemos que este producto te sorprenderá. Estos bulbos de Amaryllis recubiertos con una cera de color pueden florecer sin riego.</p>
+                <!-- Precio -->
+                <p class="card-price">Precio: $22000</p>
+                <!-- Disponibilidad -->
+                <p class="card-availability">Disponibilidad: En stock</p>
+                <!-- Boton para agregar al carrito -->
+                <button class="btn btn-primary mt-auto">Agregar al carrito</button>
+            </div>
+        </div>
+    </div>
+    </div>
+</div>
+<div class="container mt-5">
+<div class="row d-flex align-items-stretch">
+    <!-- Primera card -->
+    <div class="col-md-4">
+        <!-- Card -->
+        <div class="card h-100">
+            <!-- Imagen -->
+            <img src="IMG/plantas/amapola.jpg" class="card-img-top" alt="Imagen del producto">
+            <div class="card-body d-flex flex-column">
+                <!-- Nombre -->
+                <h5 class="card-title">Amapola (Papaver rhoeas)</h5>
+                <!-- Descripcion -->
+                <p class="card-text">La amapola es una flor de extraordinaria belleza y simbolismo, conocida científicamente como Papaver rhoeas. Con sus delicados pétalos en tonos vibrantes de rojo, rosa, blanco y naranja, la amapola es una adición cautivadora a cualquier jardín o arreglo floral.</p>
+                <!-- Precio -->
+                <p class="card-price">Precio: $5000</p>
+                <!-- Disponibilidad -->
+                <p class="card-availability">Disponibilidad: En stock</p>
+                <!-- Boton -->
+                <button class="btn btn-primary mt-auto">Agregar al carrito</button>
+            </div>
+        </div>
+    </div>
+    <!-- Segunda card -->
+    <div class="col-md-4">
+        <!-- Card -->
+        <div class="card h-100">
+            <!-- Imagen -->
+            <img src="IMG/plantas/venus.jpg" class="card-img-top" alt="Imagen del producto">
+            <div class="card-body d-flex flex-column">
+                <!-- Nombre -->
+                <h5 class="card-title">Venus Atrapamoscas (Dionaea muscipula)</h5>
+                <!-- Descripcion -->
+                <p class="card-text">La Venus Atrapamoscas, conocida científicamente como Dionaea muscipula, es una de las plantas carnívoras más fascinantes y exóticas que puedes encontrar. Con su habilidad única para atrapar y digerir insectos, esta planta no solo es una maravilla de la naturaleza, sino también una adición intrigante para cualquier coleccionista de plantas o amante de la jardinería.</p>
+                <!-- Precio de la card -->
+                <p class="card-price">Precio: $13000</p>
+                <!-- Disponibilidad de la card -->
+                <p class="card-availability">Disponibilidad: En stock</p>
+                <!-- Boton para agregar al carrito -->
+                <button class="btn btn-primary mt-auto">Agregar al carrito</button>
+            </div>
+        </div>
+    </div>
+    <!-- Tercera columna para la tercera tarjeta -->
+    <div class="col-md-4">
+        <!-- Card -->
+        <div class="card h-100">
+            <!-- Imagen de la card -->
+            <img src="IMG/plantas/helecho.jpg" class="card-img-top" alt="Imagen del producto">
+            <div class="card-body d-flex flex-column">
+                <!-- Nombre de la card -->
+                <h5 class="card-title">Helecho Espada (Nephrolepis exaltata)</h5>
+                <!-- Descripcion de la card -->
+                <p class="card-text">El Helecho Espada, también conocido como Nephrolepis exaltata, es una planta de interior popular apreciada por su elegante follaje verde y su capacidad para purificar el aire. Originario de regiones tropicales y subtropicales, este helecho es una opción versátil y de bajo mantenimiento para agregar un toque de frescura y tranquilidad a cualquier espacio.</p>
+                <!-- Precio de la card -->
+                <p class="card-price">Precio: $8000</p>
+                <!-- Disponibilidad de la card -->
+                <p class="card-availability">Disponibilidad: En stock</p>
+                <!-- Boton para agregar al carrito -->
+                <button class="btn btn-primary mt-auto">Agregar al carrito</button>
+            </div>
+        </div>
+    </div>
+</div>
+</div>
+<!--  Fin Cards -->
+  
+
+  <!-- Bootstrap -->
+  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js" integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.min.js" integrity="sha384-0pUGZvbkm6XF6gxjEnlmuGrJXVbNuzT9qBBavbLwCsOGabYfZo0T0to5eqruptLy" crossorigin="anonymous"></script>
+  <!-- Javascript -->
+  <script src="script.js"></script>
+</body>
+</html>

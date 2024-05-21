@@ -9,16 +9,19 @@
     padding-left: 30px;
     padding-right: 30px;
 }
+
 /* Estilo cards*/
 .card-img-top {
     height: 500px; 
     object-fit: cover; 
 }
+
 /* Estilo del h1 */
 h1 {
     text-align: center;
     padding-top: 30px;
 }
+
 /* Estilo para el fondo con gradiente */
 .navbar-dark{
     background-image: linear-gradient(to right,#40A578, #9DDE8B);
@@ -26,16 +29,30 @@ h1 {
 
 /* Cambio de Color Boton a verde*/
 .btn:hover {
-    background-color: #28a745; /* Cambia el color a verde cuando se pasa el ratón por encima */
-    border-color: #28a745; /* Cambia el color del borde a verde */
+    background-color: #9DDE8B;
+    border-color: #9DDE8B; 
 }
 
 /* Fondo de la Pagina */
 body {
     
-    background-image: url('IMG/tiorene.jpg'); /* Ruta de tu imagen de fondo */
-    background-size: cover; /* Para cubrir todo el fondo */
-    background-position: center; /* Para centrar la imagen */
-    background-attachment: fixed; /* Para fijar el fondo y que no se desplace con el contenido */
+    /* background-image: url('IMG/tiorene.jpg');  */
+    background-size: cover; 
+    background-position: center; 
+    background-attachment: fixed; 
     background-color: whitesmoke;
+}
+
+/* Dropdown color */
+.dropdown-item:hover {
+  background-color: whitesmoke !important;
+}
+.dropdown-item:active {
+    background-color: #40A578 !important;
+}
+/* Carousel style */
+.carousel-item img {
+    width: 100% !important;
+    height: 500px;
+    object-fit: cover;
 }

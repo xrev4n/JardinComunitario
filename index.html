@@ -7,6 +7,13 @@
   <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
   <link href="style.css" rel="stylesheet">
   <title>Jardin Solidario</title>
+  <style>
+    /* Estilo local para cards - Evita que se use el de style.css */
+    .card {
+      max-height: 400px;
+      max-width: 400px;
+    }
+  </style>
 </head>
 <body>
   <!-- Inicio de la barra de navegación -->
@@ -53,32 +60,155 @@
   <!-- Fin de la barra de navegación -->
 
   <!-- Carrusel -->
-  <div class="carousel-container mt-5 d-flex justify-content-center">
-    <div id="carouselExampleIndicators" class="carousel slide">
-      <div class="carousel-indicators">
-        <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
-        <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1" aria-label="Slide 2"></button>
+  <div id="carouselExampleFade" class="carousel slide carousel-fade mt-5" data-bs-ride="carousel">
+    <div class="carousel-indicators">
+      <button type="button" data-bs-target="#carouselExampleFade" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+      <button type="button" data-bs-target="#carouselExampleFade" data-bs-slide-to="1" aria-label="Slide 2"></button>
+      <button type="button" data-bs-target="#carouselExampleFade" data-bs-slide-to="2" aria-label="Slide 3"></button>
+      <button type="button" data-bs-target="#carouselExampleFade" data-bs-slide-to="3" aria-label="Slide 4"></button>
+    </div>
+    <div class="carousel-inner">
+      <div class="carousel-item active" data-bs-interval="5000">
+        <img src="../IMG/carousel/flores1.jpg" class="d-block w-100" alt="...">
       </div>
-      <div class="carousel-inner">
-        <div class="carousel-item active custom-carousel-item">
-          <img src="../IMG/maceta1.jpg" class="d-block mx-auto" alt="...">
-        </div>
-        <div class="carousel-item custom-carousel-item">
-          <img src="../IMG/MACETA-AUTORREGANTE-BERBERIS-60-ANTRACITA-VERDE-02-1.png" class="d-block mx-auto" alt="...">
+      <div class="carousel-item" data-bs-interval="5000">
+        <img src="../IMG/carousel/flores2.jpg" class="d-block w-100" alt="...">
+      </div>
+      <div class="carousel-item" data-bs-interval="5000">
+        <img src="../IMG/carousel/flores3.jpg" class="d-block w-100" alt="...">
+      </div>
+      <div class="carousel-item" data-bs-interval="5000">
+        <img src="../IMG/carousel/flores4.jpg" class="d-block w-100" alt="...">
+      </div>
+    </div>
+    <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleFade" data-bs-slide="prev">
+      <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+      <span class="visually-hidden">Previous</span>
+    </button>
+    <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleFade" data-bs-slide="next">
+      <span class="carousel-control-next-icon" aria-hidden="true"></span>
+      <span class="visually-hidden">Next</span>
+    </button>
+  </div>
+
+  <!-- Productos destacados -->
+  <h1>Productos Destacados</h1>
+  <div class="container mt-3">
+    <div class="row">
+      <!-- Primera card -->
+      <div class="col-md-3">
+        <!-- Card -->
+        <div class="card h-100 d-flex flex-column">
+          <!-- Imagen -->
+          <img src="IMG/plantas/echinocactus.jpg" class="card-img-top" alt="Imagen del producto" style="height: 200px; object-fit: cover;">
+          <div class="card-body d-flex flex-column">
+            <!-- Nombre -->
+            <h5 class="card-title text-center">Asiento de Suegra (Echinocactus Grusonii)</h5>
+            <!-- Precio -->
+            <p class="card-price text-center">Precio: $22.000</p>
+            <!-- Boton para agregar al carrito -->
+            <div class="mt-auto text-center">
+              <button class="btn btn-success">Agregar al carrito</button>
+            </div>
+          </div>
         </div>
       </div>
-      <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="prev">
-        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-        <span class="visually-hidden">Previous</span>
-      </button>
-      <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="next">
-        <span class="carousel-control-next-icon" aria-hidden="true"></span>
-        <span class="visually-hidden">Next</span>
-      </button>
+      <!-- Segunda card -->
+      <div class="col-md-3">
+        <!-- Card -->
+        <div class="card h-100 d-flex flex-column">
+          <!-- Imagen -->
+          <img src="IMG/sustratos/sustrato-almacigos-22-litros-34028549505206.webp" class="card-img-top" alt="Imagen del producto" style="height: 200px; object-fit: cover;">
+          <div class="card-body d-flex flex-column">
+            <!-- Nombre -->
+            <h5 class="card-title text-center">Sustrato Almácigos | 10 Litros</h5>
+            <!-- Precio -->
+            <p class="card-price text-center">Precio: $6.990</p>
+            <!-- Boton para agregar al carrito -->
+            <div class="mt-auto text-center">
+              <button class="btn btn-success">Agregar al carrito</button>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- Tercera card -->
+      <div class="col-md-3">
+        <!-- Card -->
+        <div class="card h-100 d-flex flex-column">
+          <!-- Imagen -->
+          <img src="IMG/arbustos/Arbusto3.webp" class="card-img-top" alt="Imagen del producto" style="height: 200px; object-fit: cover;">
+          <div class="card-body d-flex flex-column">
+            <!-- Nombre -->
+            <h5 class="card-title text-center">Lavanda Francesa - Lavandula Dentata</h5>
+            <!-- Precio -->
+            <p class="card-price text-center">Precio: $6.500</p>
+            <!-- Boton para agregar al carrito -->
+            <div class="mt-auto text-center">
+              <button class="btn btn-success">Agregar al carrito</button>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- Cuarta card -->
+      <div class="col-md-3">
+        <!-- Card -->
+        <div class="card h-100 d-flex flex-column">
+          <!-- Imagen -->
+          <img src="IMG/maceteros/919729-firenze3.jpg" class="card-img-top" alt="Imagen del producto" style="height: 200px; object-fit: cover;">
+          <div class="card-body d-flex flex-column">
+            <!-- Nombre -->
+            <h5 class="card-title text-center">Macetero Firenze</h5>
+            <!-- Precio -->
+            <p class="card-price text-center">Precio: $20.900</p>
+            <!-- Boton para agregar al carrito -->
+            <div class="mt-auto text-center">
+              <button class="btn btn-success">Agregar al carrito</button>
+            </div>
+          </div>
+        </div>
+      </div>
+
     </div>
   </div>
-<!-- Fin Carrusel -->
 
+  <!-- Sobre Nosotros -->
+  <div class="container">
+    <div class="row">
+      <div class="col">
+        <h1>Sobre Nosotros</h1>
+        <p>
+          Somos una comunidad unida por la pasión por la jardinería y el deseo de hacer el bien. Nuestro proyecto comenzó cuando un grupo de vecinos decidió vender productos para jardinería, como maceteros, tierra de hojas, flores y arbustos, con el objetivo de recaudar fondos para una fundación sin fines de lucro. 
+        </p>
+        <p>
+          Nuestro compromiso es seguir apoyando a la fundación y a nuestra comunidad, ofreciendo productos de alta calidad y fomentando el amor por la jardinería. Gracias por ser parte de esta noble causa y ayudarnos a hacer una diferencia significativa.
+        </p>
+      </div>
+    </div>
+  </div>
+
+  <!-- Footer -->
+  <footer class="bg-success text-light py-2">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-6 mt-2">
+          <h5>Contacto</h5>
+          <ul class="list-unstyled text-light">
+            <li>Dirección: Avenida Siempreviva #742, Springfield</li>
+            <li>Teléfono: +123 456 789</li>
+            <li>Correo Electrónico: info@jardinsolidario.com</li>
+          </ul>
+        </div>
+        <div class="col-md-6 mt-2">
+          <h5>Redes Sociales</h5>
+          <ul class="list-unstyled">
+            <li><a href="https://www.facebook.com" class="text-light"><i class="fab fa-facebook-f me-2"></i>Facebook</a></li>
+            <li><a href="https://www.x.com" class="text-light"><i class="fab fa-twitter me-2"></i>Twitter</a></li>
+            <li><a href="https://www.instagram.com" class="text-light"><i class="fab fa-instagram me-2"></i>Instagram</a></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </footer>
 
   <!-- Bootstrap -->
   <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js" integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r" crossorigin="anonymous"></script>

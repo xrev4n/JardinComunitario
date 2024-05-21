@@ -1,0 +1,31 @@
+/* Estilos para centrar el formulario */
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+}
+
+.container {
+    max-width: 400px;
+}
+
+/* Estilo para el fondo con gradiente */
+.navbar-dark{
+    background-image: linear-gradient(to right,#40A578, #9DDE8B);
+}
+
+/* Dropdown color */
+.dropdown-item:hover {
+    background-color: lightgreen !important;
+  }
+
+  .dropdown-item:active {
+      background-color: #40A578 !important;
+  }
+
+
+  .navbar-nav .nav-link {
+    margin-right: 30px; /* Espaciado entre los elementos de navegación */
+}

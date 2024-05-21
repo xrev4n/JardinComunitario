@@ -6,53 +6,54 @@
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
   <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
   <link href="style.css" rel="stylesheet">
+  <link rel="stylesheet" href="productos.css">
   <title>Arbustos</title>
 </head>
 <body>
-  <!-- Inicio de la barra de navegación -->
-  <nav class="navbar navbar-expand-sm navbar-dark bg-dark">
-    <!-- Este es el logo o nombre de la página web -->
-    <a class="navbar-brand text-white" href="#">Jardin Solidario</a>
-    <!-- Responsive -->
-    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-      <span class="navbar-toggler-icon"></span>
-    </button>
-    <!-- Aquí están los enlaces de la barra de navegación -->
-    <div class="collapse navbar-collapse" id="navbarNav">
-      <ul class="navbar-nav">
-        <!-- Cada 'li' es un enlace en la barra de navegación -->
-        <li class="nav-item active">
-          <a class="nav-link text-white" href="index.html">Inicio</a>
-        </li>
-        <!-- Dropdown -->
-        <li class="nav-item dropdown">
-          <a class="nav-link dropdown-toggle text-white" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-            Plantas
-          </a>
-          <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-            <li><a class="dropdown-item" href="brotes.html">Brotes</a></li>
-            <li><a class="dropdown-item" href="arbustos.html">Arbustos</a></li>
-          </ul>
-        </li>
-        <li class="nav-item dropdown">
-          <a class="nav-link dropdown-toggle text-white" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-            Productos
-          </a>
-          <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-            <li><a class="dropdown-item" href="sustrato.html">Sustratos</a></li>
-            <li><a class="dropdown-item" href="macetero.html">Maceteros</a></li>
-          </ul>
-        </li>
-      </ul>
-      <span class="navbar-text text-white ms-auto" id="welcomeMessage"></span>
-      <span class="navbar-text text-white ms-auto me-3" id="cartIcon">
-        <i class="fa fa-shopping-cart"></i>
-      </span>
-    </div>
-  </nav>
-  <!-- Fin de la barra de navegación -->
+ <!-- Inicio de la barra de navegación -->
+ <nav class="navbar navbar-expand-sm navbar-dark bg-dark">
+  <!-- Este es el logo o nombre de la página web -->
+  <a class="navbar-brand text-white" href="#"><strong>Jardin Solidario</strong></a>
+  <!-- Este botón aparece cuando la pantalla es pequeña (responsive design) -->
+  <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+  <!-- Aquí están los enlaces de la barra de navegación -->
+  <div class="collapse navbar-collapse" id="navbarNav">
+    <ul class="navbar-nav">
+      <!-- Cada 'li' es un enlace en la barra de navegación -->
+      <li class="nav-item active">
+        <a class="nav-link text-white" href="index.html"><strong>Inicio</strong></a>
+      </li>
+      <!-- Dropdown -->
+      <li class="nav-item dropdown">
+        <a class="nav-link dropdown-toggle text-white" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+          <strong>Plantas</strong>
+        </a>
+        <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+          <li><a class="dropdown-item" href="brotes.html"><strong>Brotes</strong></a></li>
+          <li><a class="dropdown-item" href="arbustos.html"><strong>Arbustos</strong></a></li>
+        </ul>
+      </li>
+      <li class="nav-item dropdown">
+        <a class="nav-link dropdown-toggle text-white" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+          <strong>Productos</strong>
+        </a>
+        <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+          <li><a class="dropdown-item" href="sustrato.html"><strong>Sustratos</strong></a></li>
+          <li><a class="dropdown-item" href="macetero.html"><strong>Maceteros</strong></a></li>
+        </ul>
+      </li>
+    </ul>
+    <span class="navbar-text text-white ms-auto" id="welcomeMessage"></span>
+    <span class="navbar-text text-white ms-auto me-3" id="cartIcon">
+      <i class="fa fa-shopping-cart"></i>
+    </span>
+  </div>
+</nav>
+<!-- Fin de la barra de navegación -->
   
-  <h1>Arbustos</h1>
+<h1><img src="IMG/tiorene.jpg" alt=". . ."></h1>
 
    <!--  Inicio Cards -->
    <div class="container mt-5">
@@ -63,6 +64,7 @@
             <div class="card h-100">
                 <!-- Imagen -->
                 <img src="IMG/arbustos/Arbusto1.jpg" class="card-img-top" alt="Imagen del producto">
+               
                 <div class="card-body d-flex flex-column">
                     <!-- Nombre -->
                     <h5 class="card-title">Pitosporo Tobira Enano - Pittosporum Tobira Nana</h5>
@@ -71,7 +73,7 @@
                     <!-- Precio -->
                     <p class="card-price">Precio: $5.600</p>
                     <!-- Disponibilidad -->
-                    <p class="card-availability">Disponibilidad: En stock</p>
+                    <p class="card-availability"><strong>Disponibilidad:</strong> 14 Unidades</p>
                     <!-- Boton para agregar al carrito -->
                     <button class="btn btn-success mt-auto">Agregar al carrito</button>
                 </div>
@@ -91,9 +93,9 @@
                     <!-- Precio -->
                     <p class="card-price">Precio: $1.800</p>
                     <!-- Disponibilidad -->
-                    <p class="card-availability">Disponibilidad: En stock</p>
+                    <p class="card-availability"><strong>Disponibilidad:</strong> Sin Unidades</p>
                     <!-- Boton para agregar al carrito -->
-                    <button class="btn btn-success mt-auto">Agregar al carrito</button>
+                    <button class="btn btn-danger mt-auto">Agotado</button>
                 </div>
             </div>
         </div>
@@ -103,15 +105,18 @@
         <div class="card h-100">
             <!-- Imagen -->
             <img src="IMG/arbustos/Arbusto3.webp" class="card-img-top" alt="Imagen del producto">
+            <div class="discount-image">
+              <p class="discount-text">15% Descuento</p>
+          </div>
             <div class="card-body d-flex flex-column">
                 <!-- Nombre -->
                 <h5 class="card-title">Lavanda Francesa - Lavandula Dentata</h5>
                 <!-- Descripcion -->
                 <p class="card-text">Planta aromática, flores violetas, hojas dentadas, originaria del Mediterráneo, propiedades medicinales.</p>
                 <!-- Precio -->
-                <p class="card-price">Precio: $6.500</p>
+                <p class="card-price"><del>Precio: $6.500</del> <span class="discount-price">Ahora: $5.525</span></p>
                 <!-- Disponibilidad -->
-                <p class="card-availability">Disponibilidad: En stock</p>
+                <p class="card-availability"><strong>Disponibilidad:</strong> 1 Unidad</p>
                 <!-- Boton para agregar al carrito -->
                 <button class="btn btn-success mt-auto">Agregar al carrito</button>
             </div>
@@ -135,7 +140,7 @@
                 <!-- Precio -->
                 <p class="card-price">Precio: $2.800</p>
                 <!-- Disponibilidad -->
-                <p class="card-availability">Disponibilidad: En stock</p>
+                <p class="card-availability"><strong>Disponibilidad:</strong> 16 Unidades</p>
                 <!-- Boton -->
                 <button class="btn btn-success mt-auto">Agregar al carrito</button>
             </div>
@@ -155,7 +160,7 @@
                 <!-- Precio de la card -->
                 <p class="card-price">Precio: $8.900</p>
                 <!-- Disponibilidad de la card -->
-                <p class="card-availability">Disponibilidad: En stock</p>
+                <p class="card-availability"><strong>Disponibilidad:</strong> 7 Unidades</p>
                 <!-- Boton para agregar al carrito -->
                 <button class="btn btn-success mt-auto">Agregar al carrito</button>
             </div>
@@ -175,7 +180,7 @@
                 <!-- Precio de la card -->
                 <p class="card-price">Precio: $4.800</p>
                 <!-- Disponibilidad de la card -->
-                <p class="card-availability">Disponibilidad: En stock</p>
+                <p class="card-availability"><strong>Disponibilidad:</strong> 6 Unidades</p>
                 <!-- Boton para agregar al carrito -->
                 <button class="btn btn-success mt-auto">Agregar al carrito</button>
             </div>
@@ -184,6 +189,30 @@
 </div>
 </div>
 <!--  Fin Cards -->
+
+ <!-- Footer -->
+ <footer class="bg-success text-light py-2">
+  <div class="container">
+    <div class="row">
+      <div class="col-md-6 mt-2">
+        <h5>Contacto</h5>
+        <ul class="list-unstyled text-light">
+          <li>Dirección: Avenida Siempreviva #742, Springfield</li>
+          <li>Teléfono: +123 456 789</li>
+          <li>Correo Electrónico: info@jardinsolidario.com</li>
+        </ul>
+      </div>
+      <div class="col-md-6 mt-2">
+        <h5>Redes Sociales</h5>
+        <ul class="list-unstyled">
+          <li><a href="https://www.facebook.com" class="text-light"><i class="fab fa-facebook-f me-2"></i>Facebook</a></li>
+          <li><a href="https://www.x.com" class="text-light"><i class="fab fa-twitter me-2"></i>Twitter</a></li>
+          <li><a href="https://www.instagram.com" class="text-light"><i class="fab fa-instagram me-2"></i>Instagram</a></li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</footer>
   
 
   <!-- Bootstrap -->

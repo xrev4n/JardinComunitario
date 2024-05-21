@@ -22,6 +22,11 @@ h1 {
     padding-top: 30px;
 }
 
+h1 img {
+    height: 300px;
+    width: 50%;
+}
+
 /* Estilo para el fondo con gradiente */
 .navbar-dark{
     background-image: linear-gradient(to right,#40A578, #9DDE8B);
@@ -45,14 +50,29 @@ body {
 
 /* Dropdown color */
 .dropdown-item:hover {
-  background-color: whitesmoke !important;
+  background-color: lightgreen !important;
 }
 .dropdown-item:active {
     background-color: #40A578 !important;
 }
 /* Carousel style */
 .carousel-item img {
+    
     width: 100% !important;
     height: 500px;
     object-fit: cover;
+    padding-left: 3%;
+    padding-right: 3%;
+    padding-top: 50px;
+    padding-bottom: 50px;
 }
+
+.navbar-nav .nav-link {
+    margin-right: 30px; /* Espaciado entre los elementos de navegación */
+}
+
+.container {
+    margin-bottom: 50px;
+}
+
+  

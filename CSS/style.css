@@ -75,4 +75,9 @@ body {
     margin-bottom: 50px;
 }
 
-  
+.h1 img {
+    width: auto; 
+    height: auto; 
+    max-width: 100%; 
+    max-height: 100%; 
+}

@@ -13,52 +13,49 @@
 
 <body>
 
-    <!-- Inicio de la barra de navegación -->
-    <nav class="navbar navbar-expand-sm navbar-dark bg-dark">
-        <!-- Este es el logo o nombre de la página web -->
-        <img src="IMG/logo.jpg" alt="" style="width: 70px;">
-        <a class="navbar-brand text-white" href="#"><strong>Jardin Solidario</strong></a>
-        <!-- Este botón aparece cuando la pantalla es pequeña (responsive design) -->
-        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
-            aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon"></span>
-        </button>
-        <!-- Aquí están los enlaces de la barra de navegación -->
-        <div class="collapse navbar-collapse" id="navbarNav">
-            <ul class="navbar-nav">
-                <!-- Cada 'li' es un enlace en la barra de navegación -->
-                <li class="nav-item active">
-                    <a class="nav-link text-white" href="index.html"><strong>Inicio</strong></a>
-                </li>
-                <!-- Dropdown -->
-                <li class="nav-item dropdown">
-                    <a class="nav-link dropdown-toggle text-white" href="#" id="navbarDropdownPlants" role="button"
-                        data-bs-toggle="dropdown" aria-expanded="false">
-                        <strong>Plantas</strong>
-                    </a>
-                    <ul class="dropdown-menu" aria-labelledby="navbarDropdownPlants">
-                        <li><a class="dropdown-item" href="brotes.html"><strong>Brotes</strong></a></li>
-                        <li><a class="dropdown-item" href="arbustos.html"><strong>Arbustos</strong></a></li>
-                    </ul>
-                </li>
-                <li class="nav-item dropdown">
-                    <a class="nav-link dropdown-toggle text-white" href="#" id="navbarDropdownProducts" role="button"
-                        data-bs-toggle="dropdown" aria-expanded="false">
-                        <strong>Productos</strong>
-                    </a>
-                    <ul class="dropdown-menu" aria-labelledby="navbarDropdownProducts">
-                        <li><a class="dropdown-item" href="sustrato.html"><strong>Sustratos</strong></a></li>
-                        <li><a class="dropdown-item" href="macetero.html"><strong>Maceteros</strong></a></li>
-                    </ul>
-                </li>
-            </ul>
-            <span class="navbar-text text-white ms-auto" id="welcomeMessage"></span>
-            <span class="navbar-text text-white ms-auto me-3" id="cartIcon">
-                <i class="fas fa-shopping-cart"></i> <!-- Utilizando Font Awesome 6 -->
-            </span>
-        </div>
-    </nav>
-    <!-- Fin de la barra de navegación -->
+<!-- Inicio de la barra de navegación -->
+<nav class="navbar navbar-expand-sm navbar-dark bg-dark">
+    <!-- Este es el logo o nombre de la página web -->
+    <img src="IMG/logo.jpg" alt="" style="width: 70px;">
+    <a class="navbar-brand text-white" href="#"><strong>Jardin Solidario</strong></a>
+    <!-- Este botón aparece cuando la pantalla es pequeña (responsive design) -->
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <!-- Aquí están los enlaces de la barra de navegación -->
+    <div class="collapse navbar-collapse" id="navbarNav">
+      <ul class="navbar-nav">
+        <!-- Cada 'li' es un enlace en la barra de navegación -->
+        <li class="nav-item active">
+          <a class="nav-link text-white" href="index.html"><strong>Inicio</strong></a>
+        </li>
+        <!-- Dropdown -->
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle text-white" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+            <strong>Plantas</strong>
+          </a>
+          <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+            <li><a class="dropdown-item" href="brotes.html"><strong>Brotes</strong></a></li>
+            <li><a class="dropdown-item" href="arbustos.html"><strong>Arbustos</strong></a></li>
+          </ul>
+        </li>
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle text-white" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+            <strong>Productos</strong>
+          </a>
+          <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+            <li><a class="dropdown-item" href="sustrato.html"><strong>Sustratos</strong></a></li>
+            <li><a class="dropdown-item" href="macetero.html"><strong>Maceteros</strong></a></li>
+          </ul>
+        </li>
+      </ul>
+      <span class="navbar-text text-white ms-auto" id="welcomeMessage"></span>
+      <span class="navbar-text text-white ms-auto me-3" id="cartIcon" data-bs-toggle="modal" data-bs-target="#cartModal">
+        <i class="fa fa-shopping-cart"></i>
+      </span>
+    </div>
+  </nav>
+  <!-- Fin de la barra de navegación -->
 
     <div class="container">
         <form>

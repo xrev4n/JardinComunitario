@@ -89,4 +89,54 @@ $(document).ready(function() {
     function loadCart() {
       updateCartTable();
     }
+        // Evento de clic para el botón "Proceder al Pago"
+    $('#cartSummary').on('click', '#payButton', function() {
+        // Redireccionar a la página "carrito.html"
+        window.location.href = "carrito.html";
+    });
+    // Evento de clic para el botón "Proceder al Pago"
+    $('#cartSummary').on('click', '#payButton', function() {
+      // Redireccionar a la página "carrito.html"
+      window.location.href = "carrito.html";
+  });
 });
+
+//Mostrar carrito
+$(document).ready(function() {
+  // Cargar y mostrar el resumen del carrito al cargar la página
+  updateCartSummary();
+
+  // Función para cargar y mostrar el resumen del carrito
+  function updateCartSummary() {
+    let cart = JSON.parse(localStorage.getItem('cart')) || [];
+    let cartItemsSummary = '';
+    let total = 0;
+
+    cart.forEach(item => {
+      let itemTotal = item.price * item.quantity;
+      total += itemTotal;
+      cartItemsSummary += `
+        <tr>
+          <td>${item.name}</td>
+          <td>${formatPrice(item.price)}</td>
+          <td>${item.quantity}</td>
+          <td>${formatPrice(itemTotal)}</td>
+        </tr>
+      `;
+    });
+
+    $('#cartItemsSummary').html(cartItemsSummary);
+    $('#cartTotalSummary').text(formatPrice(total));
+  }
+
+  // Función para formatear el precio con puntos como separadores de miles
+  function formatPrice(price) {
+    return '$' + price.toLocaleString('es-CL', { minimumFractionDigits: 0 });
+  }
+
+  // Botón para pagar (puedes agregar la lógica de pago aquí)
+  $('#payButton').click(function() {
+    alert('¡Gracias por tu compra!');
+  });
+});
+

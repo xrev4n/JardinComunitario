@@ -7,22 +7,19 @@
   <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
   <link href="CSS/style.css" rel="stylesheet">
   <link rel="stylesheet" href="CSS/productos.css">
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+  <script src="carrito.js"></script>
   <title>Maceteros</title>
 </head>
 <body>
-
   <!-- Inicio de la barra de navegación -->
   <nav class="navbar navbar-expand-sm navbar-dark bg-dark">
-    <!-- Este es el logo o nombre de la página web -->
     <a class="navbar-brand text-white" href="#"><strong>Jardin Solidario</strong></a>
-    <!-- Este botón aparece cuando la pantalla es pequeña (responsive design) -->
     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
       <span class="navbar-toggler-icon"></span>
     </button>
-    <!-- Aquí están los enlaces de la barra de navegación -->
     <div class="collapse navbar-collapse" id="navbarNav">
       <ul class="navbar-nav">
-        <!-- Cada 'li' es un enlace en la barra de navegación -->
         <li class="nav-item active">
           <a class="nav-link text-white" href="index.html"><strong>Inicio</strong></a>
         </li>
@@ -47,185 +44,215 @@
         </li>
       </ul>
       <span class="navbar-text text-white ms-auto" id="welcomeMessage"></span>
-      <span class="navbar-text text-white ms-auto me-3" id="cartIcon">
+      <span class="navbar-text text-white ms-auto me-3" id="cartIcon" data-bs-toggle="modal" data-bs-target="#cartModal">
         <i class="fa fa-shopping-cart"></i>
       </span>
     </div>
   </nav>
   <!-- Fin de la barra de navegación -->
 
-  <h1><img src="IMG/tiorene.jpg" alt=". . ."></h1>
-
-
-   <!--  Inicio Cards -->
-   <div class="container mt-5">
-    <div class="row d-flex align-items-stretch">
-        <!-- Primera card -->
-        <div class="col-md-4">
-            <!-- Card -->
-            <div class="card h-100">
-                <!-- Imagen -->
-                <img src="IMG/maceteros/875772-round2.jpg" class="card-img-top" alt="Imagen del producto">
-                <div class="card-body d-flex flex-column">
-                    <!-- Nombre -->
-                    <h5 class="card-title">Macetero Flute round</h5>
-                    <!-- Descripcion -->
-                    <p class="card-text">Macetero muy liviano, apto para plantas de naturales como artificiales.
-                      Look elegante que quedará bien tanto en interior como en exterior.</p>
-                    <!-- Precio -->
-                    <p class="card-price">Precio: $26.900</p>
-                    <!-- Disponibilidad -->
-                    <p class="card-availability"><strong>Disponibilidad:</strong> 11 Unidades</p>
-                    <!-- Boton para agregar al carrito -->
-                    <button class="btn btn-success mt-auto">Agregar al carrito</button>
-                </div>
-            </div>
+  <!-- Carrito de Compras Modal -->
+  <div class="modal fade" id="cartModal" tabindex="-1" aria-labelledby="cartModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="cartModalLabel">Carrito de Compras</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
         </div>
-        <!-- Segunda card -->
-        <div class="col-md-4">
-            <!-- Card -->
-            <div class="card h-100">
-                <!-- Imagen -->
-                <img src="IMG/maceteros/760539-IMG_9434.webp" class="card-img-top" alt="Imagen del producto">
-                <div class="card-body d-flex flex-column">
-                    <!-- Nombre -->
-                    <h5 class="card-title">Maceta Amsterdam, incluye plato</h5>
-                    <!-- Descripcion -->
-                    <p class="card-text">Maceta Amsterdam es parte de nuestra línea de macetas con plato incluido.
-                      Polietileno de alta densidad, considerada la segunda resina más reciclable del mundo.</p>
-                    <!-- Precio -->
-                    <p class="card-price">Precio: $19.900</p>
-                    <!-- Disponibilidad -->
-                    <p class="card-availability"><strong>Disponibilidad:</strong> 9 Unidades</p>
-                    <!-- Boton para agregar al carrito -->
-                    <button class="btn btn-success mt-auto">Agregar al carrito</button>
-                </div>
-            </div>
+        <div class="modal-body">
+          <table class="table">
+            <thead>
+              <tr>
+                <th>Producto</th>
+                <th>Precio</th>
+                <th>Cantidad</th>
+                <th>Total</th>
+                <th></th>
+              </tr>
+            </thead>
+            <tbody id="cartItems">
+              <!-- Items del carrito serán agregados aquí -->
+            </tbody>
+          </table>
+          <p class="text-end"><strong>Total: <span id="cartTotal">0</span></strong></p>
         </div>
-        <!-- Tercera card -->
-        <div class="col-md-4">
-        <!-- Card -->
-        <div class="card h-100">
-            <!-- Imagen -->
-            <img src="IMG/maceteros/919729-firenze3.jpg" class="card-img-top" alt="Imagen del producto">
-            <div class="discount-image">
-              <p class="discount-text">5% Descuento</p>
-          </div>
-            <div class="card-body d-flex flex-column">
-                <!-- Nombre -->
-                <h5 class="card-title">Macetero Firenze</h5>
-                <!-- Descripcion -->
-                <p class="card-text">Macetero muy liviano, estilo clásico, para interior y exterior.
-                  No se destiñen!</p>
-                <!-- Precio -->
-                <p class="card-price"><del>Precio: $20.900</del> <span class="discount-price">Ahora: $19.855</span></p>
-                <!-- Disponibilidad -->
-                <p class="card-availability"><strong>Disponibilidad:</strong> 2 Unidades</p>
-                <!-- Boton para agregar al carrito -->
-                <button class="btn btn-success mt-auto">Agregar al carrito</button>
-            </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
+          <button type="button" class="btn btn-primary">Proceder al Pago</button>
         </div>
-    </div>
-    </div>
-</div>
-<div class="container mt-5">
-<div class="row d-flex align-items-stretch">
-    <!-- Primera card -->
-    <div class="col-md-4">
-        <!-- Card -->
-        <div class="card h-100">
-            <!-- Imagen -->
-            <img src="IMG/maceteros/885614-Planter.jpg" class="card-img-top" alt="Imagen del producto">
-            <div class="card-body d-flex flex-column">
-                <!-- Nombre -->
-                <h5 class="card-title">Macetero gigante</h5>
-                <!-- Descripcion -->
-                <p class="card-text">Macetero de gran tamaño, ideal para árboles.</p>
-                <!-- Precio -->
-                <p class="card-price">Precio: $139.000</p>
-                <!-- Disponibilidad -->
-                <p class="card-availability"><strong>Disponibilidad:</strong> Sin Unidades</p>
-                <!-- Boton -->
-                <button class="btn btn-danger mt-auto">Agotado</button>
-            </div>
-        </div>
-    </div>
-    <!-- Segunda card -->
-    <div class="col-md-4">
-        <!-- Card -->
-        <div class="card h-100">
-            <!-- Imagen -->
-            <img src="IMG/maceteros/877524-Macetero_gota.webp" class="card-img-top" alt="Imagen del producto">
-            <div class="card-body d-flex flex-column">
-                <!-- Nombre -->
-                <h5 class="card-title">Macetero fibrocemento gota</h5>
-                <!-- Descripcion -->
-                <p class="card-text">Macetero mezcla de Fibra de Vidrio y cemento lo cual los hace ser muy livianos y con un gran look.
-                  Puedes utilizarlo tanto para plantas artificiales como naturales.</p>
-                <!-- Precio de la card -->
-                <p class="card-price">Precio: $61.900</p>
-                <!-- Disponibilidad de la card -->
-                <p class="card-availability"><strong>Disponibilidad:</strong> 12 Unidades</p>
-                <!-- Boton para agregar al carrito -->
-                <button class="btn btn-success mt-auto">Agregar al carrito</button>
-            </div>
-        </div>
-    </div>
-    <!-- Tercera columna para la tercera tarjeta -->
-    <div class="col-md-4">
-        <!-- Card -->
-        <div class="card h-100">
-            <!-- Imagen de la card -->
-            <img src="IMG/maceteros/645517-Ginebra.webp" class="card-img-top" alt="Imagen del producto">
-            <div class="card-body d-flex flex-column">
-                <!-- Nombre de la card -->
-                <h5 class="card-title">Maceta Ginebra, incluye plato</h5>
-                <!-- Descripcion de la card -->
-                <p class="card-text">Nuestra nueva línea de maceteros de poliresina viene con plato incluido!!!
-                  Macetero con un look que vestirá cualquiera de tus espacios, aptos para interior o exterior. Altamente resistentes a sol y lluvia.</p>
-                <!-- Precio de la card -->
-                <p class="card-price">Precio: $16.000</p>
-                <!-- Disponibilidad de la card -->
-                <p class="card-availability"><strong>Disponibilidad:</strong> 5 Unidades</p>
-                <!-- Boton para agregar al carrito -->
-                <button class="btn btn-success mt-auto">Agregar al carrito</button>
-            </div>
-        </div>
-    </div>
-</div>
-</div>
-<!--  Fin Cards -->
-
- <!-- Footer -->
- <footer class="bg-success text-light py-2">
-  <div class="container">
-    <div class="row">
-      <div class="col-md-6 mt-2">
-        <h5>Contacto</h5>
-        <ul class="list-unstyled text-light">
-          <li>Dirección: Avenida Siempreviva #742, Springfield</li>
-          <li>Teléfono: +123 456 789</li>
-          <li>Correo Electrónico: info@jardinsolidario.com</li>
-        </ul>
-      </div>
-      <div class="col-md-6 mt-2">
-        <h5>Redes Sociales</h5>
-        <ul class="list-unstyled">
-          <li><a href="https://www.facebook.com" class="text-light"><i class="fab fa-facebook-f me-2"></i>Facebook</a></li>
-          <li><a href="https://www.x.com" class="text-light"><i class="fab fa-twitter me-2"></i>Twitter</a></li>
-          <li><a href="https://www.instagram.com" class="text-light"><i class="fab fa-instagram me-2"></i>Instagram</a></li>
-        </ul>
       </div>
     </div>
   </div>
-</footer>
 
-  
+  <h1><img src="IMG/tiorene.jpg" alt=". . ."></h1>
+
+  <!--  Inicio Cards -->
+  <div class="container mt-5">
+    <div class="row d-flex align-items-stretch">
+      <!-- Primera card -->
+      <div class="col-md-4">
+        <!-- Card -->
+        <div class="card h-100">
+          <!-- Imagen -->
+          <img src="IMG/maceteros/875772-round2.jpg" class="card-img-top" alt="Imagen del producto">
+          <div class="card-body d-flex flex-column">
+            <!-- Nombre -->
+            <h5 class="card-title">Macetero Flute round</h5>
+            <!-- Descripcion -->
+            <p class="card-text">Macetero muy liviano, apto para plantas de naturales como artificiales.
+              Look elegante que quedará bien tanto en interior como en exterior.</p>
+            <!-- Precio -->
+            <p class="card-price">Precio: $26.900</p>
+            <!-- Disponibilidad -->
+            <p class="card-availability"><strong>Disponibilidad:</strong> 11 Unidades</p>
+            <!-- Boton para agregar al carrito -->
+            <button class="btn btn-success add-to-cart">Agregar al carrito</button>
+          </div>
+        </div>
+      </div>
+      <!-- Segunda card -->
+      <div class="col-md-4">
+        <!-- Card -->
+        <div class="card h-100">
+          <!-- Imagen -->
+          <img src="IMG/maceteros/760539-IMG_9434.webp" class="card-img-top" alt="Imagen del producto">
+          <div class="card-body d-flex flex-column">
+            <!-- Nombre -->
+            <h5 class="card-title">Maceta Amsterdam, incluye plato</h5>
+            <!-- Descripcion -->
+            <p class="card-text">Maceta Amsterdam es parte de nuestra línea de macetas con plato incluido.
+              Polietileno de alta densidad, considerada la segunda resina más reciclable del mundo.</p>
+            <!-- Precio -->
+            <p class="card-price">Precio: $19.900</p>
+            <!-- Disponibilidad -->
+            <p class="card-availability"><strong>Disponibilidad:</strong> 9 Unidades</p>
+            <!-- Boton para agregar al carrito -->
+            <button class="btn btn-success add-to-cart">Agregar al carrito</button>
+          </div>
+        </div>
+      </div>
+      <!-- Tercera card -->
+      <div class="col-md-4">
+        <!-- Card -->
+        <div class="card h-100">
+          <!-- Imagen -->
+          <img src="IMG/maceteros/919729-firenze3.jpg" class="card-img-top" alt="Imagen del producto">
+          <div class="discount-image">
+            <p class="discount-text">5% Descuento</p>
+          </div>
+          <div class="card-body d-flex flex-column">
+            <!-- Nombre -->
+            <h5 class="card-title">Macetero Firenze</h5>
+            <!-- Descripcion -->
+            <p class="card-text">Macetero muy liviano, estilo clásico, para interior y exterior.
+              No se destiñen!</p>
+            <!-- Precio -->
+            <p class="card-price"><del>Precio: $20.900</del> <span class="discount-price">Ahora: $19.855</span></p>
+            <!-- Disponibilidad -->
+            <p class="card-availability"><strong>Disponibilidad:</strong> 2 Unidades</p>
+            <!-- Boton para agregar al carrito -->
+            <button class="btn btn-success add-to-cart">Agregar al carrito</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="container mt-5">
+    <div class="row d-flex align-items-stretch">
+      <!-- Primera card -->
+      <div class="col-md-4">
+        <!-- Card -->
+        <div class="card h-100">
+          <!-- Imagen -->
+          <img src="IMG/maceteros/885614-Planter.jpg" class="card-img-top" alt="Imagen del producto">
+          <div class="card-body d-flex flex-column">
+            <!-- Nombre -->
+            <h5 class="card-title">Macetero gigante</h5>
+            <!-- Descripcion -->
+            <p class="card-text">Macetero de gran tamaño, ideal para árboles.</p>
+            <!-- Precio -->
+            <p class="card-price">Precio: $139.000</p>
+            <!-- Disponibilidad -->
+            <p class="card-availability"><strong>Disponibilidad:</strong> Sin Unidades</p>
+            <!-- Boton -->
+            <button class="btn btn-danger mt-auto">Agotado</button>
+          </div>
+        </div>
+      </div>
+      <!-- Segunda card -->
+      <div class="col-md-4">
+        <!-- Card -->
+        <div class="card h-100">
+          <!-- Imagen -->
+          <img src="IMG/maceteros/877524-Macetero_gota.webp" class="card-img-top" alt="Imagen del producto">
+          <div class="card-body d-flex flex-column">
+            <!-- Nombre -->
+            <h5 class="card-title">Macetero fibrocemento gota</h5>
+            <!-- Descripcion -->
+            <p class="card-text">Macetero mezcla de Fibra de Vidrio y cemento lo cual los hace ser muy livianos y con un gran look.
+              Puedes utilizarlo tanto para plantas artificiales como naturales.</p>
+            <!-- Precio -->
+            <p class="card-price">Precio: $61.900</p>
+            <!-- Disponibilidad -->
+            <p class="card-availability"><strong>Disponibilidad:</strong> 12 Unidades</p>
+            <!-- Boton para agregar al carrito -->
+            <button class="btn btn-success add-to-cart">Agregar al carrito</button>
+          </div>
+        </div>
+      </div>
+      <!-- Tercera card -->
+      <div class="col-md-4">
+        <!-- Card -->
+        <div class="card h-100">
+          <!-- Imagen -->
+          <img src="IMG/maceteros/645517-Ginebra.webp" class="card-img-top" alt="Imagen del producto">
+          <div class="card-body d-flex flex-column">
+            <!-- Nombre -->
+            <h5 class="card-title">Maceta Ginebra, incluye plato</h5>
+            <!-- Descripcion -->
+            <p class="card-text">Nuestra nueva línea de maceteros de poliresina viene con plato incluido!!!
+              Macetero con un look que vestirá cualquiera de tus espacios, aptos para interior o exterior. Altamente resistentes a sol y lluvia.</p>
+            <!-- Precio -->
+            <p class="card-price">Precio: $16.000</p>
+            <!-- Disponibilidad -->
+            <p class="card-availability"><strong>Disponibilidad:</strong> 5 Unidades</p>
+            <!-- Boton para agregar al carrito -->
+            <button class="btn btn-success add-to-cart">Agregar al carrito</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!--  Fin Cards -->
+
+  <!-- Footer -->
+  <footer class="bg-success text-light py-2">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-6 mt-2">
+          <h5>Contacto</h5>
+          <ul class="list-unstyled text-light">
+            <li>Dirección: Avenida Siempreviva #742, Springfield</li>
+            <li>Teléfono: +123 456 789</li>
+            <li>Correo Electrónico: info@jardinsolidario.com</li>
+          </ul>
+        </div>
+        <div class="col-md-6 mt-2">
+          <h5>Redes Sociales</h5>
+          <ul class="list-unstyled">
+            <li><a href="https://www.facebook.com" class="text-light"><i class="fab fa-facebook-f me-2"></i>Facebook</a></li>
+            <li><a href="https://www.x.com" class="text-light"><i class="fab fa-twitter me-2"></i>Twitter</a></li>
+            <li><a href="https://www.instagram.com" class="text-light"><i class="fab fa-instagram me-2"></i>Instagram</a></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </footer>
 
   <!-- Bootstrap -->
   <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js" integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r" crossorigin="anonymous"></script>
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.min.js" integrity="sha384-0pUGZvbkm6XF6gxjEnlmuGrJXVbNuzT9qBBavbLwCsOGabYfZo0T0to5eqruptLy" crossorigin="anonymous"></script>
-  <!-- Javascript -->
+  <script src="carrito.js"></script>
   <script src="script.js"></script>
 </body>
 </html>

@@ -7,6 +7,8 @@
   <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
   <link href="CSS/style.css" rel="stylesheet">
   <link rel="stylesheet" href="CSS/sustratos.css">
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+  <script src="carrito.js"></script>
   <title>Sustratos</title>
 </head>
 <body>
@@ -53,6 +55,38 @@
     </div>
   </nav>
   <!-- Fin de la barra de navegación -->
+  <!-- Carrito de Compras Modal -->
+  <div class="modal fade" id="cartModal" tabindex="-1" aria-labelledby="cartModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="cartModalLabel">Carrito de Compras</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+          <table class="table">
+            <thead>
+              <tr>
+                <th>Producto</th>
+                <th>Precio</th>
+                <th>Cantidad</th>
+                <th>Total</th>
+                <th></th>
+              </tr>
+            </thead>
+            <tbody id="cartItems">
+              <!-- Items del carrito serán agregados aquí -->
+            </tbody>
+          </table>
+          <p class="text-end"><strong>Total: <span id="cartTotal">0</span></strong></p>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
+          <button type="button" class="btn btn-primary">Proceder al Pago</button>
+        </div>
+      </div>
+    </div>
+  </div>
 
   <h1><img src="IMG/tiorene.jpg" alt=". . ."></h1>
 
@@ -79,7 +113,7 @@
                     <!-- Disponibilidad -->
                     <p class="card-availability"><strong>Disponibilidad:</strong> 2 Unidades</p>
                     <!-- Boton para agregar al carrito -->
-                    <button class="btn btn-success mt-auto">Agregar al carrito</button>
+                    <button class="btn btn-success add-to-cart">Agregar al carrito</button>
                 </div>
             </div>
         </div>
@@ -99,7 +133,7 @@
                     <!-- Disponibilidad -->
                     <p class="card-availability"><strong>Disponibilidad:</strong> Sin Unidades</p>
                     <!-- Boton para agregar al carrito -->
-                    <button class="btn btn-danger mt-auto">Agotado</button>
+                    <button class="btn btn-success add-to-cart">Agregar al carrito</button>
                 </div>
             </div>
         </div>
@@ -119,7 +153,7 @@
                 <!-- Disponibilidad -->
                 <p class="card-availability"><strong>Disponibilidad:</strong> 5 Unidades</p>
                 <!-- Boton para agregar al carrito -->
-                <button class="btn btn-success mt-auto">Agregar al carrito</button>
+                <button class="btn btn-success add-to-cart">Agregar al carrito</button>
             </div>
         </div>
     </div>
@@ -143,7 +177,7 @@
                 <!-- Disponibilidad -->
                 <p class="card-availability"><strong>Disponibilidad:</strong> 17 Unidades</p>
                 <!-- Boton -->
-                <button class="btn btn-success mt-auto">Agregar al carrito</button>
+                <button class="btn btn-success add-to-cart">Agregar al carrito</button>
             </div>
         </div>
     </div>
@@ -163,7 +197,7 @@
                 <!-- Disponibilidad de la card -->
                 <p class="card-availability"><strong>Disponibilidad:</strong> 8 Unidades</p>
                 <!-- Boton para agregar al carrito -->
-                <button class="btn btn-success mt-auto">Agregar al carrito</button>
+                <button class="btn btn-success add-to-cart">Agregar al carrito</button>
             </div>
         </div>
     </div>
@@ -183,7 +217,7 @@
                 <!-- Disponibilidad de la card -->
                 <p class="card-availability"><strong>Disponibilidad:</strong> 3 Unidades</p>
                 <!-- Boton para agregar al carrito -->
-                <button class="btn btn-success mt-auto">Agregar al carrito</button>
+                <button class="btn btn-success add-to-cart">Agregar al carrito</button>
             </div>
         </div>
     </div>

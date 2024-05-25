@@ -9,60 +9,26 @@
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
     <link href="CSS/login.css" rel="stylesheet">
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-<script src="login.js"></script>
+    <script src="login.js"></script>
     <title>Bienvenido / Login</title>
 </head>
 
 <body>
-
-<!-- Inicio de la barra de navegación -->
-<nav class="navbar navbar-expand-sm navbar-dark bg-dark">
-    <!-- Este es el logo o nombre de la página web -->
-    <img src="IMG/logos/3.png" alt="" style="width: 70px;">
-    <a class="navbar-brand text-white" href="#"><strong>Rincón Verde</strong></a>
-    <!-- Este botón aparece cuando la pantalla es pequeña (responsive design) -->
-    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-      <span class="navbar-toggler-icon"></span>
-    </button>
-    <!-- Aquí están los enlaces de la barra de navegación -->
-    <div class="collapse navbar-collapse" id="navbarNav">
-      <ul class="navbar-nav">
-        <!-- Cada 'li' es un enlace en la barra de navegación -->
-        <li class="nav-item active">
-          <a class="nav-link text-white" href="index.html"><strong>Inicio</strong></a>
-        </li>
-        <!-- Dropdown -->
-        <li class="nav-item dropdown">
-          <a class="nav-link dropdown-toggle text-white" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-            <strong>Plantas</strong>
-          </a>
-          <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-            <li><a class="dropdown-item" href="brotes.html"><strong>Brotes</strong></a></li>
-            <li><a class="dropdown-item" href="arbustos.html"><strong>Arbustos</strong></a></li>
-          </ul>
-        </li>
-        <li class="nav-item dropdown">
-          <a class="nav-link dropdown-toggle text-white" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-            <strong>Productos</strong>
-          </a>
-          <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-            <li><a class="dropdown-item" href="sustrato.html"><strong>Sustratos</strong></a></li>
-            <li><a class="dropdown-item" href="macetero.html"><strong>Maceteros</strong></a></li>
-          </ul>
-        </li>
-      </ul>
-      <span class="navbar-text text-white ms-auto" id="welcomeMessage"></span>
-      <span class="navbar-text text-white ms-auto me-3" id="cartIcon" data-bs-toggle="modal" data-bs-target="#cartModal">
-        <i class="fa fa-shopping-cart"></i>
-      </span>
-    </div>
-  </nav>
-  <!-- Fin de la barra de navegación -->
-
+    <nav class="navbar navbar-expand-sm navbar-dark bg-dark">
+        <img src="IMG/Helen (2).png" alt="" style="width: 100px;">
+        <a href="index.html" class="navbar-brand text-white" href="#"><strong>Rincón Verde</strong></a>
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <span class="navbar-text text-white ms-auto" id="userIcon">
+                <i class="fa-solid fa-phone"></i>
+                <i class="fas fa-user"></i> <span id="usernameDisplay"></span>
+                
+            </span>
+        </div>
+    </nav>
     <div class="container">
         <form>
             <div class="mb-3">
-                <label for="exampleInputEmail1" class="form-label"><strong>Nombre de usuario o correo electrónico </strong></label>
+                <label for="exampleInputEmail1" class="form-label"><strong> Correo electrónico</strong></label>
                 <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
                 <div id="emailHelp" class="form-text">Nunca compartiremos su Correo electrónico con nadie más.</div>
             </div>
@@ -72,22 +38,22 @@
             </div>
             <div class="mb-3 form-check">
                 <input type="checkbox" class="form-check-input" id="exampleCheck1">
-                <label class="form-check-label" for="exampleCheck1"><strong>Permanecer Conectado</strong></label>
+                <label class="form-check-label" for="exampleCheck1"><strong>Recordar Contraseña</strong></label>
             </div>
             <button type="submit" class="btn btn-primary">Acceso</button>
         </form>
     </div>
-
-    <!-- Footer -->
+    
     <footer class="bg-success text-light py-2">
         <div class="container2">
             <div class="row">
                 <div class="col-md-6 mt-2">
                     <h5>Contacto</h5>
                     <ul class="list-unstyled text-light">
-                        <li>Dirección: Avenida Siempreviva #742, Springfield</li>
-                        <li>Teléfono: +123 456 789</li>
-                        <li>Correo Electrónico: info@jardinsolidario.com</li>
+                        <li><i class="fa-solid fa-house me-2"></i>Dirección: Avenida Siempreviva #742, Springfield</i></li>
+                        <li><i class="fa-solid fa-phone me-2"></i>Teléfono: +123 456 789 </i></li>
+                        <li><i class="fa-solid fa-envelope me-2"></i>Correo Electrónico: info@rinconverde.com</i></li>
+                        <li><i class="fa-solid fa-circle-question me-2"></i></i>Ayuda</i></li>
                     </ul>
                 </div>
                 <div class="col-md-6 mt-2">
@@ -104,14 +70,12 @@
             </div>
         </div>
     </footer>
-
-    <!-- Bootstrap -->
-      
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"
         integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r"
         crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.min.js"
         integrity="sha384-0pUGZvbkm6XF6gxjEnlmuGrJXVbNuzT9qBBavbLwCsOGabYfZo0T0to5eqruptLy"
-         
+        crossorigin="anonymous"></script>
+</body>
 
-        
+</html>

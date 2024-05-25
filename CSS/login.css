@@ -40,12 +40,12 @@ h1 img {
 
 /* Fondo de la Pagina */
 body {
+    background-image: url('../IMG/pexels-minan1398-1131458.jpg');  
+    background-size: cover; /* Ajusta el tamaño de la imagen para cubrir todo el cuerpo */
+    background-position: center; /* Centra la imagen de fondo */
+    background-attachment: fixed; /* Fija la imagen de fondo para que no se desplace con el contenido */
+    background-color: whitesmoke; /* Color de fondo de respaldo */
     
-    /* background-image: url('IMG/tiorene.jpg');  */
-    background-size: cover; 
-    background-position: center; 
-    background-attachment: fixed; 
-    background-color: whitesmoke;
 }
 
 /* Dropdown color */
@@ -72,10 +72,13 @@ body {
 }
 
 .container {
-    margin-top: 100px;
+    margin-top: 200px;
     width: 400px;
     text-align: center;
-    margin-bottom: 300px;
+    margin-bottom: 320px;
+    backdrop-filter: blur(15px) ;
+    border-radius: 20px;
+    
 
 }
 

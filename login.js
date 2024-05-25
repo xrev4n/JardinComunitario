@@ -4,7 +4,6 @@ $(document).ready(function() {
     
     // Añadir un listener al evento de envío del formulario
     $form.on("submit", function(event) {
-        
         // Prevenir el comportamiento por defecto del formulario
         event.preventDefault();
         
